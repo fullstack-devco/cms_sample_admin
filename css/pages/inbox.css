@@ -1,0 +1,137 @@
+.inbox_list_row_flex {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+}
+
+.inbox_list_row_checkbox {
+  width: 50px;
+  height: 30px;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.inbox_list_row_date_status {
+  width: 100%;
+  height: 30px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.section-menu-inbox {
+  width: 300px;
+  height: 600px;
+  background: var(--color-light-grey);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-menu-inbox-list {
+  width: 300px;
+  height: 500px;
+  background: var(--color-light-grey);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete_inbox {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+}
+
+.delete_inbox_btn {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .section-menu-inbox-list {
+    width: 100%;
+    height: 100px;
+    background: var(--color-light-grey);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .section-menu-inbox-list {
+    width: 100%;
+    height: 100px;
+    background: var(--color-light-grey);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 
+  ##Device = Ultra small Smartphone Mobile screens
+  ##Screen = B/w 150px to 319px
+*/
+
+@media (min-width: 150px) and (max-width: 319px) {
+  .section-menu-inbox-list {
+    width: 100%;
+    height: 100px;
+    background: var(--color-light-grey);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+}

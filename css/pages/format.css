@@ -1,0 +1,331 @@
+#main-container {
+  height: 100%;
+  min-height: 100%;
+}
+
+.header-banner {
+  width: 100%;
+  height: auto;
+  background: var(--color-dark-blue);
+}
+
+#section {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#section-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#section-menu {
+  width: 300px;
+  height: 600px;
+  background: var(--color-light-grey);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-menu-content {
+  width: 100%;
+  height: 50px;
+}
+
+#section-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#iframe {
+  flex: 1;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+#nav {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  z-index: 999;
+}
+
+li.active a {
+  color: var(--color-orange);
+}
+
+#logo-div {
+  flex: 1;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#in-between-div {
+  flex: 3;
+}
+
+#nav-div {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.horizontal-nav ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-nav ul > li {
+  flex: 1;
+  align-self: center;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.link-btn::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-white);
+  transition: width 0.3s;
+}
+
+.link-btn:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.nav-placeholder {
+  margin: 0px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: var(--color-black);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#sidenav-burger {
+  text-align: end;
+  padding: 10px;
+  color: var(--color-white);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  background: #263238;
+  transition: background 1s ease-in;
+  transition: background 1s ease-out;
+}
+
+#sidenav-burger,
+#sidenav-body {
+  display: none;
+}
+
+a {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+a.active {
+  color: var(--color-orange);
+}
+
+.focus {
+  color: var(--color-orange);
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .horizontal-nav {
+    display: none;
+  }
+
+  #sidenav-burger,
+  #sidenav-body {
+    display: block;
+  }
+
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  #section-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #section-menu {
+    width: 100%;
+    height: 120px;
+    background: var(--color-light-grey);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .horizontal-nav {
+    display: none;
+  }
+
+  #sidenav-burger,
+  #sidenav-body {
+    display: block;
+  }
+
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  #section-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #section-menu {
+    width: 100%;
+    height: 120px;
+    background: var(--color-light-grey);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+/* 
+  ##Device = Ultra small Smartphone Mobile screens
+  ##Screen = B/w 150px to 319px
+*/
+
+@media (min-width: 150px) and (max-width: 319px) {
+  .horizontal-nav {
+    display: none;
+  }
+
+  #sidenav-burger,
+  #sidenav-body {
+    display: block;
+  }
+
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  #section-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #section-menu {
+    width: 100%;
+    height: 120px;
+    background: var(--color-light-grey);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
